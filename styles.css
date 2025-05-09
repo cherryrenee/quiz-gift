@@ -23,7 +23,7 @@ body {
   position: relative;
   width: 95vw;
   height: 90vh;
-  margin: 2em auto 0;
+  margin: 2em 0 0;
 }
 img {
   width: 100%;
@@ -111,7 +111,7 @@ p {
   gap: 0.8em;
 }
 .score-btn {
-  width: 6em;
+  width: 6.5em;
   height: 2.5em;
   border: 0.125em solid #addef3;
   background: none;
