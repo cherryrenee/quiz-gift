@@ -12,19 +12,20 @@
 body {
   margin: 0;
   background: #f6ebc8;
-  min-width: 360px;
 }
 .container {
   color: #780606;
   background: #fff;
-  margin: 4em 2em 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 1.5em 2em;
+  width: 95vw;
   height: 90vh;
+  margin: 1.5em auto 0;
+  min-width: 360px;
 }
 img {
   width: 100%;
