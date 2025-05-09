@@ -131,7 +131,8 @@ scoreBtn.addEventListener("click", () => {
 const applyBtn = document.querySelector(".submit-btn");
 const complete = document.querySelector(".complete");
 
-applyBtn.addEventListener("click",()=>{
+applyBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
   modalApply.style.display="none";
   complete.style.display="block";
 })
