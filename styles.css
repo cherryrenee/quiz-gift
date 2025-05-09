@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: vitro;
+  src: url(vitro.TTF);
+}
+@font-face {
+  font-family: sejong;
+  src: url(sejong.TTF);
+}
+body {
+  margin: 0;
+  background: #f6ebc8;
+  min-width: 360px;
+}
+.container {
+  color: #780606;
+  background: #fff;
+  margin: 4em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1.5em 2em;
+  height: 90vh;
+}
+img {
+  width: 100%;
+}
+.sticker {
+  width: 5em;
+  position: absolute;
+  top: -1em;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+.circles {
+  display: flex;
+  gap: 1.5em;
+  position: absolute;
+  top: -0.3em;
+  z-index: 1;
+}
+.cir {
+  width: 1.5em;
+  height: 1.5em;
+  background: #f6ebc8;
+  border-radius: 50%;
+}
+.main-page {
+  height: 60%;
+  width: 80%;
+  padding: 1em;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-family: vitro;
+  font-size: 8rem;
+  margin: 0;
+}
+h3 {
+  font-family: sejong;
+  margin: 0.5em 0 2.5em;
+  font-size: 2rem;
+}
+.start-btn {
+  width: 8em;
+  height: 2.5em;
+  border: none;
+  background-color: #780606;
+  color: #fff;
+  font-family: vitro;
+  font-size: 2.5rem;
+  border-radius: 2em;
+  cursor: pointer;
+}
+.start-btn:hover {
+  background-color: #f6ebc8;
+  color: #780606;
+  transition: all ease 0.5s;
+}
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 95%;
+}
+h2 {
+  font-family: sejong;
+  font-size: 1rem;
+  margin: 0 0 0.5em;
+}
+p {
+  color: #161616;
+  font-family: sejong;
+  font-size: 0.75rem;
+  font-weight: 550;
+  border: 0.1em solid #780606;
+  margin: 0;
+  padding: 0.5em 0.8em;
+  border-radius: 0.5em;
+}
+.answers {
+  display: flex;
+  gap: 0.8em;
+}
+.score-btn {
+  width: 6em;
+  height: 2.5em;
+  border: 0.125em solid #addef3;
+  background: none;
+  color: #addef3;
+  font-size: 1rem;
+  font-family: vitro;
+  border-radius: 1em;
+}
+.score-btn {
+}
+.btn-div {
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+}
