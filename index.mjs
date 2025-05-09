@@ -5,10 +5,10 @@ import { actorData } from "./data.mjs";
 import { capitalData } from "./data.mjs";
 
 const startBtn = document.querySelector(".start-btn");
-const mainPage = document.querySelector(".mainPage");
+const mainPage = document.querySelector(".main-page");
 const quizPage = document.querySelector(".quiz-page");
 
 startBtn.addEventListener("click", () => {
   mainPage.style.display = "none";
-  quizPage.style.dispaly = "flex";
+  quizPage.style.display = "flex";
 });
