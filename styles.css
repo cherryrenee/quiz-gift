@@ -82,6 +82,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 h1 {
   font-family: vitro;
@@ -257,4 +258,16 @@ input{
 .submit{
   display: flex;
   justify-content: end;
+}
+.complete{
+  display: none;
+  text-align: center;
+}
+.complete-title{
+  color: #f6ebc8;
+  font-size: 3.5rem;
+}
+.complete-text{
+  color: #f6ebc8;
+  font-size: 1.5rem;
 }
