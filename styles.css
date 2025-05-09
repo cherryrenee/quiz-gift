@@ -11,6 +11,7 @@
 }
 body {
   margin: 0;
+  width: 100vw;
   background: #f6ebc8;
 }
 .container {
@@ -22,14 +23,14 @@ body {
   align-items: center;
   position: relative;
   width: 90vw;
-  padding: 1.5em 0 1.2em;
-  margin: 2em auto 0;
+  padding: 1.5em 0 1.1em;
+  margin: 2em auto;
 }
 img {
   width: 100%;
 }
 .sticker {
-  width: 5em;
+  width: 6em;
   position: absolute;
   top: -1em;
   transform: rotate(15deg);
@@ -102,14 +103,16 @@ p {
   font-size: 1.2rem;
   font-weight: 550;
   border: 0.1em solid #780606;
-  margin: 0 0 1em 0;
   padding: 0.5em 0.8em;
   border-radius: 0.5em;
+  margin: 0;
 }
 .answers {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, auto);
+  align-content: center;
   gap: 0.8em;
+  margin: 0 0 2em 0;
 }
 .score-btn {
   width: 6.5em;
