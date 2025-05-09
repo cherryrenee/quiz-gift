@@ -93,6 +93,9 @@ radioEl.forEach((radio) => {
 
 const span1 = document.querySelector(".span1");
 const span2 = document.querySelector(".span2");
+const modalScore = document.querySelector(".modal-score");
+const modalApply = document.querySelector(".modal-apply");
+
 
 scoreBtn.addEventListener("click", () => {
   for (let key in selectedEl) {
@@ -118,13 +121,13 @@ scoreBtn.addEventListener("click", () => {
   setTimeout(() => {
     clearInterval(counter);
   }, 5000);
-});
-
-const modalScore = document.querySelector(".modal-score");
-const modalApply = document.querySelector(".modal-apply");
-const applyBtn = document.querySelector(".apply-btn");
-
-setTimeout(() => {
+  setTimeout(() => {
   modalScore.style.display = "none";
   modalApply.style.display = "flex";
 }, 5000);
+});
+
+
+const applyBtn = document.querySelector(".submit-btn");
+
+

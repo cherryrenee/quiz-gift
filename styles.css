@@ -180,7 +180,7 @@ h2 {
 }
 .modal {
   width: 85vw;
-  height: 50vh;
+  height: 55vh;
   background: #780606;
   position: fixed;
   top: 0;
@@ -198,6 +198,8 @@ h2 {
 }
 .modal-score {
   text-align: center;
+  width: 80%;
+  height: 80%;
 }
 
 #modal-title {
@@ -212,4 +214,47 @@ span {
 }
 .span1 {
   font-size: 7rem;
+}
+.modal-apply{
+  width: 80%;
+  height: 80%;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+.apply-title{
+  font-size: 2.5rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+input{
+  padding: 0.5em 0.5em;
+  font-size: 1.2rem;
+  font-family: sejong;
+  border-radius: 0.3em;
+}
+.submit-btn{
+  width: 6em;
+  height: 2em;
+  font-size: 1.5rem;
+  padding: 0.5em 0;
+  font-family: sejong;
+  font-weight: 900;
+  margin: 0.6em 0 0 0;
+  border: 0;
+  border-radius: 1em;
+  cursor: pointer;
+  background: #f6ebc8;
+  color: #780606;
+}
+.submit-btn:hover{
+  background: #acdef5;
+  transition: all ease 0.5s;
+}
+.submit{
+  display: flex;
+  justify-content: end;
 }
