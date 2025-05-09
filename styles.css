@@ -1,3 +1,7 @@
+html,
+body {
+  overflow-x: hidden;
+}
 * {
   box-sizing: border-box;
 }
@@ -11,8 +15,9 @@
 }
 body {
   margin: 0;
-  width: 100vw;
   background: #f6ebc8;
+  padding: 0;
+  width: 100vw;
 }
 .container {
   color: #780606;
@@ -101,7 +106,7 @@ p {
   color: #161616;
   font-family: sejong;
   font-size: 1.2rem;
-  font-weight: 550;
+  font-weight: 600;
   border: 0.1em solid #780606;
   padding: 0.5em 0.8em;
   border-radius: 0.5em;
@@ -115,9 +120,9 @@ p {
   margin: 0 0 2em 0;
 }
 .score-btn {
-  width: 6.5em;
-  height: 2.5em;
-  border: 0.125em solid #addef3;
+  width: 10em;
+  height: 4em;
+  border: 0.2em solid #addef3;
   background: none;
   color: #addef3;
   font-size: 1rem;
