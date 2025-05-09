@@ -24,14 +24,20 @@ body {
   margin: 1em auto 0;
 }
 .bigger-btn {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: vitro;
-  padding: 0.5em 0.8em;
+  padding: 0.1em;
   border: none;
   color: #161616;
   background: none;
   border-radius: 1em;
+  cursor: pointer;
 }
+.bigger-btn:hover {
+  color: #acdef5;
+  transition: all ease 0.2s;
+}
+
 .container {
   color: #780606;
   background: #fff;
@@ -71,7 +77,7 @@ img {
   height: 60%;
   width: 80%;
   padding: 1em;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -103,7 +109,7 @@ h3 {
   transition: all ease 0.5s;
 }
 .quiz-page {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-evenly;
   width: 90%;
@@ -141,6 +147,7 @@ h2 {
   font-size: 1.8rem;
   font-family: vitro;
   border-radius: 2em;
+  cursor: pointer;
 }
 .score-btn:hover {
   background: #780606;
@@ -150,7 +157,6 @@ h2 {
 }
 .btn-div {
   width: 100%;
-
   display: flex;
   justify-content: end;
 }
