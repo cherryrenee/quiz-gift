@@ -19,6 +19,19 @@ body {
   padding: 0;
   width: 100vw;
 }
+.font {
+  width: 90vw;
+  margin: 1em auto 0;
+}
+.bigger-btn {
+  font-size: 1.5rem;
+  font-family: vitro;
+  padding: 0.5em 0.8em;
+  border: none;
+  color: #161616;
+  background: none;
+  border-radius: 1em;
+}
 .container {
   color: #780606;
   background: #fff;
@@ -28,14 +41,14 @@ body {
   align-items: center;
   position: relative;
   width: 90vw;
-  padding: 1.5em 0 1.1em;
-  margin: 2em auto;
+  padding: 2.5em 0 1.5em;
+  margin: 1em auto;
 }
 img {
   width: 100%;
 }
 .sticker {
-  width: 6em;
+  width: 7em;
   position: absolute;
   top: -1em;
   transform: rotate(15deg);
@@ -102,7 +115,7 @@ h2 {
   font-size: 1.8rem;
   margin: 0 0 0.5em;
 }
-p {
+.ops {
   color: #161616;
   font-family: sejong;
   font-size: 1.2rem;
@@ -120,16 +133,20 @@ p {
   margin: 0 0 2em 0;
 }
 .score-btn {
-  width: 10em;
-  height: 4em;
-  border: 0.2em solid #addef3;
+  width: 7em;
+  height: 2.5em;
+  border: 0.2em solid #780606;
   background: none;
-  color: #addef3;
-  font-size: 1rem;
+  color: #780606;
+  font-size: 1.8rem;
   font-family: vitro;
-  border-radius: 1em;
+  border-radius: 2em;
 }
-.score-btn {
+.score-btn:hover {
+  background: #780606;
+  color: #fff;
+  border: none;
+  transition: all ease 0.5s;
 }
 .btn-div {
   width: 100%;
