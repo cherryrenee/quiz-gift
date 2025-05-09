@@ -47,6 +47,7 @@ body {
   align-items: center;
   position: relative;
   width: 90vw;
+  height: auto;
   padding: 2.5em 0 1.5em;
   margin: 1em auto;
 }
@@ -74,7 +75,7 @@ img {
   border-radius: 50%;
 }
 .main-page {
-  height: 60%;
+  height: 80vh;
   width: 90%;
   padding: 1em;
   display: flex;
@@ -130,6 +131,9 @@ h2 {
   padding: 0.5em 0.8em;
   border-radius: 0.5em;
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
 }
 .answers {
   display: grid;
@@ -159,4 +163,53 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: end;
+}
+[type="radio"] {
+  appearance: none;
+  border: max(0.125em, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+}
+[type="radio"]:checked {
+  border: 0.4em solid #acdef5;
+}
+[type="radio"]:hover {
+  box-shadow: 0 0 0.2em gray;
+  cursor: pointer;
+}
+.modal {
+  width: 85vw;
+  height: 50vh;
+  background: #780606;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 0 3em gray;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal-score {
+  text-align: center;
+}
+
+#modal-title {
+  font-size: 5rem;
+}
+#modal-text {
+  font-family: sejong;
+  font-size: 2rem;
+}
+span {
+  color: #f6ebc8;
+}
+.span1 {
+  font-size: 7rem;
 }
