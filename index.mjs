@@ -95,7 +95,7 @@ const span1 = document.querySelector(".span1");
 const span2 = document.querySelector(".span2");
 const modalScore = document.querySelector(".modal-score");
 const modalApply = document.querySelector(".modal-apply");
-const fireworkBtn = document.getElementById('fireworkBtn');
+const fire = document.querySelector(".fire");
 
 
 scoreBtn.addEventListener("click", () => {
@@ -126,13 +126,6 @@ scoreBtn.addEventListener("click", () => {
   modalScore.style.display = "none";
   modalApply.style.display = "flex";
 }, 5000);
-if (score==5){
-fireworkBtn.classList.add('on');
-
-  setTimeout(() => {
-    fireworkBtn.classList.remove('on');
-  }, 3000);
-}
   radioEl.forEach((radio)=>{
     const parent = radio.closest(".ops");
     if (radio.checked){
@@ -151,7 +144,6 @@ fireworkBtn.classList.add('on');
       }
   });
 });
-
 
 const applyBtn = document.querySelector(".submit-btn");
 const complete = document.querySelector(".complete");

@@ -181,7 +181,7 @@ h2 {
   align-items: center;
   justify-content: center;
   display: none;
-  z-index:3;
+  z-index:40;
 }
 .cancel{
   width: 90%;
@@ -277,89 +277,6 @@ input{
   background-color: #f7c5c5; /* 연한 빨강 */
 }
 
-.fire{
-  position:fixed;
-  z-index:4;
-}
-
-.firework {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border: 2px dotted rgb(255, 99, 71);
-  border-radius: 50%;
-  opacity: 0;
-  position: absolute;
-}
-
-@keyframes burst {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  60%, 90% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-}
-
-.btn-firework {
-  position: relative;
-  cursor: pointer;
-  color:#fff;
-  background: #000;
-  border:0;
-  padding: 5px 20px;
-  border-radius: 2px;
-}
-.btn-firework.on .firework {
-  animation: burst 2s forwards;
-}
-
-.firework:nth-child(1) { 
-  top: 25px; 
-  left: 2px; 
-  animation-delay: 0s; 
-}
-.firework:nth-child(2) { 
-  top: 13px; 
-  left: 63px; 
-  width: 6px; 
-  height: 6px; 
-  animation-delay: 0.3s;
-  border-color: rgb(50, 205, 50);
-}
-.firework:nth-child(3) { 
-  top: -10px; 
-  left: 35px; 
-  width: 14px; 
-  height: 14px; 
-  animation-delay: 0.6s; 
-  border-color: rgb(135, 206, 235);
-  border-width:4px;
-}
-
-.firework:nth-child(4) { 
-  top: 5px; 
-  left: 12px; 
-  width: 11px; 
-  height: 11px; 
-  animation-delay: 0.4s; 
-  border-color: rgb(255, 215, 0);
-}
-
-.firework:nth-child(5) { 
-  top: -9px; 
-  left: -17px; 
-  width: 19px; 
-  height: 19px; 
-  animation-delay: 0.4s; 
-  border-color: rgb(218, 112, 214);
-  border-width:5px;
-}
 
 @media (min-width:1024px) {
   .modal-apply{
