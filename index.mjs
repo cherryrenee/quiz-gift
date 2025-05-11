@@ -95,6 +95,7 @@ const span1 = document.querySelector(".span1");
 const span2 = document.querySelector(".span2");
 const modalScore = document.querySelector(".modal-score");
 const modalApply = document.querySelector(".modal-apply");
+const fireworkBtn = document.getElementById('fireworkBtn');
 
 
 scoreBtn.addEventListener("click", () => {
@@ -125,14 +126,113 @@ scoreBtn.addEventListener("click", () => {
   modalScore.style.display = "none";
   modalApply.style.display = "flex";
 }, 5000);
+if (score==5){
+fireworkBtn.classList.add('on');
+
+  setTimeout(() => {
+    fireworkBtn.classList.remove('on');
+  }, 3000);
+}
+  radioEl.forEach((radio)=>{
+    const parent = radio.closest(".ops");
+    if (radio.checked){
+      const radioName = radio.name;
+      const radioValue= radio.value;
+
+      if(radioValue == correct[radioName]){
+        parent.classList.add("correct");
+        parent.classList.remove("incorrect");
+      } else {
+        parent.classList.add("incorrect");
+        parent.classList.remove("correct");
+    } 
+  }else {
+        parent.classList.remove("correct","incorrect");
+      }
+  });
 });
 
 
 const applyBtn = document.querySelector(".submit-btn");
 const complete = document.querySelector(".complete");
+const cancelBtn = document.querySelector(".cancel");
+const nameInput = document.querySelector("#name");
+const phoneInput = document.querySelector("#phone");
+const emailInput = document.querySelector("#email");
+const koreanPattern = '^([\u3130-\u318F\uAC00-\uD7AF]+)$';
+const koreanRegexp = new RegExp(koreanPattern);
+const numberPattern =  '^[0-9]*$';
+const numberRegexp = new RegExp(numberPattern);
+
+nameInput.pattern = '^([\u3130-\u318F\uAC00-\uD7AF]+)$';
+nameInput.addEventListener('input', (e) => {
+  if (isKorean(e.target.value)){ return true;}
+  else {alert("이름이 잘못 입력되었습니다. 다시 입력해주세요!");
+    nameInput.value=null;
+  }
+});
+
+function isKorean(text) {
+  return koreanRegexp.test(text);
+};
+
+phoneInput.pattern = numberPattern;
+phoneInput.addEventListener('input', (e) => {
+  if (isNumber(e.target.value)){
+    return true;
+  }
+  else {
+    alert("전화번호가 잘못 입력되었습니다. 다시 입력해주세요!");
+    phoneInput.value=null;
+  }
+});
+
+function isNumber(text) {
+  return numberRegexp.test(text);
+};
+
+let emailForm;
+
+emailInput.addEventListener('input', (e) => {
+  if (isEmail(e.target.value)) {
+    return emailForm=true;
+  } else if (e.target.value==""){
+    return emailForm=true;
+  } else {
+    return emailForm=false;
+  }
+});
+
+function isEmail(text) {
+  return /^[a-z0-9._%+-]{1,}@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$/.test(text);
+};
 
 applyBtn.addEventListener("click",(e)=>{
   e.preventDefault();
+  if(nameInput.value=="" || phoneInput.value==""){
+    alert("제대로 입력되지 않은 란이 있습니다. 입력해주시길 바랍니다.")
+    return;
+  }
+  if (emailForm===true){
   modalApply.style.display="none";
   complete.style.display="block";
-})
+  modal.style.justifyContent="start";
+  cancelBtn.style.display="flex";
+  } else {
+    if (emailInput.value !== ""){
+      alert("이메일형식이 잘못되었습니다. 다시 입력해주세요!");
+      e.preventDefault();
+      emailInput.value=null;
+    } else {
+      modalApply.style.display="none";
+      complete.style.display="block";
+     modal.style.justifyContent="start";
+  cancelBtn.style.display="flex";
+    }
+  }
+});
+
+cancelBtn.addEventListener("click",()=>{
+  modal.style.display="none";
+  scoreBtn.disabled=true;
+});

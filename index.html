@@ -11,7 +11,6 @@
     <meta property="og:image" content="https://quiz-gift.netlify.app/">
   </head>
   <body>
-    <div class="font"><button class="bigger-btn">글자 확대</button></div>
     <div class="container">
       <div class="circles">
       </div>
@@ -44,16 +43,24 @@
         <div class="btn-div"><button class="score-btn">결과보기</button></div>
       </div>
       <div class="modal">
+        <div class="cancel"><p>X</p></div>
         <div class="modal-score">
           <h1 id="modal-title"><span class="span1">0</span>점!</h1>
           <p id="modal-text">
             <span class="span2">5</span>초 후 응모화면으로 넘어갑니다.
           </p>
         </div>
+        <div class="fire">
+          <span class="firework"></span>
+  <span class="firework"></span>
+  <span class="firework"></span>
+  <span class="firework"></span>
+  <span class="firework"></span>
+        </div>
         <div class="modal-apply">
           <h2 class="apply-title">경품 응모하기🎁</h2>
           <form action="#">
-            <input type="text" id="name" placeholder="이름(필수)" required/>
+            <input type="text" id="name" maxlength="4" minlength="2" placeholder="이름(필수)" required/>
             <input type="text" id="phone" placeholder="전화번호(필수)" required/>
             <input type="email" id="email" placeholder="이메일" />
             <div class="submit"><button class="submit-btn">제출하기</button></div>
