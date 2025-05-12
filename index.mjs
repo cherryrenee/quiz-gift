@@ -157,6 +157,8 @@ nameInput.pattern = "^([\u3130-\u318F\uAC00-\uD7AF]+)$";
 nameInput.addEventListener("input", (e) => {
   if (isKorean(e.target.value)) {
     return (myName = true);
+  } else if (e.target.value == "") {
+    return (myName = false);
   } else {
     return (myName = false);
   }
@@ -170,6 +172,8 @@ let myNumber;
 phoneInput.addEventListener("input", (e) => {
   if (isNumber(e.target.value)) {
     return (myNumber = true);
+  } else if (e.target.value == "") {
+    return (myNumber = false);
   } else {
     return (myNumber = false);
   }
@@ -185,7 +189,7 @@ let emailForm;
 emailInput.addEventListener("input", (e) => {
   if (isEmail(e.target.value)) {
     return (emailForm = true);
-  } else if (e.target.value == "") {
+  } else if (e.target.value == null) {
     return (emailForm = true);
   } else {
     return (emailForm = false);
@@ -193,7 +197,9 @@ emailInput.addEventListener("input", (e) => {
 });
 
 function isEmail(text) {
-  return /^[a-z0-9._%+-]{1,}@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$/.test(text);
+  const emailPattern =
+    /^[a-z0-9._%+-]{1,}@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$/;
+  return emailPattern.test(text);
 }
 
 applyBtn.addEventListener("click", (e) => {
@@ -206,46 +212,24 @@ applyBtn.addEventListener("click", (e) => {
     complete.style.display = "flex";
     cancelBtn.style.display = "flex";
   } else {
-    if (nameInput.value == "" || phoneInput.value == "") {
-      alert("제대로 입력되지 않은 란이 있습니다. 입력해주시길 바랍니다.");
-      e.preventDefault();
-      nameInput.value = null;
-      phoneInput.value = null;
-    } else if (emailInput.value !== "") {
+    if (emailForm === false && myName === true && myNumber === true) {
       alert("이메일형식이 잘못되었습니다. 다시 입력해주세요!");
       e.preventDefault();
       emailInput.value = null;
-    } else if (myName === false) {
+    } else if (myName === false && emailForm === true && myNumber === true) {
       alert("이름이 잘못 입력되었습니다. 다시 입력해주세요!");
       e.preventDefault();
       nameInput.value = null;
-    } else if (myNumber === false) {
+    } else if (myNumber === false && myNumber === true && emailForm === true) {
       alert("전화번호가 잘못 입력되었습니다. 다시 입력해주세요!");
       e.preventDefault();
       phoneInput.value = null;
-    }
-  }
-
-  if (nameInput.value == "" || phoneInput.value == "") {
-    alert("제대로 입력되지 않은 란이 있습니다. 입력해주시길 바랍니다.");
-    return;
-  }
-
-  if (emailForm === true) {
-    modalApply.style.display = "none";
-    complete.style.display = "block";
-    modal.style.justifyContent = "start";
-    cancelBtn.style.display = "flex";
-  } else {
-    if (emailInput.value !== "") {
-      alert("이메일형식이 잘못되었습니다. 다시 입력해주세요!");
+    } else if (myName === false && myNumber === false && emailForm === false) {
+      alert("모든 란이 잘못 입력되었습니다. 다시 입력해주세요!");
       e.preventDefault();
+      nameInput.value = null;
+      phoneInput.value = null;
       emailInput.value = null;
-    } else {
-      modalApply.style.display = "none";
-      complete.style.display = "block";
-      modal.style.justifyContent = "start";
-      cancelBtn.style.display = "flex";
     }
   }
 });
