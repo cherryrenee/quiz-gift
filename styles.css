@@ -126,7 +126,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.8em;
-    margin: 0 0 2em 0;
+  margin: 0 0 2em 0;
 }
 .score-btn {
   width: 7em;
@@ -151,6 +151,7 @@ h2 {
   justify-content: end;
 }
 [type="radio"] {
+  margin: 0.1em 0.1em 0 0;
   appearance: none;
   border: max(0.125em, 0.1em) solid gray;
   border-radius: 50%;
@@ -181,16 +182,16 @@ h2 {
   align-items: center;
   justify-content: center;
   display: none;
-  z-index:40;
+  z-index: 40;
 }
-.cancel{
+.cancel {
   width: 90%;
   display: none;
   justify-content: end;
-  margin: 0.5em 0 5em 0;
+  margin: 0.5em 0 0 0;
   cursor: pointer;
 }
-p{
+p {
   font-size: 1.5rem;
   margin: 0;
 }
@@ -198,6 +199,10 @@ p{
   text-align: center;
   width: 80%;
   height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #modal-title {
@@ -214,28 +219,45 @@ span {
 .span1 {
   font-size: 7rem;
 }
-.modal-apply{
+.modal-apply {
   width: 80%;
   height: 80%;
   display: none;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
 }
-.apply-title{
+.apply-title {
   font-size: 2.5rem;
 }
-form{
+form {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-input{
+input {
   padding: 0.5em 0.5em;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: sejong;
   border-radius: 0.3em;
+  margin: 0 0 0.5em 0;
 }
-.submit-btn{
+#apply-email,
+#apply-name,
+#apply-phone {
+  font-family: sejong;
+  color: #f6ebc8;
+  font-size: 1.2rem;
+}
+.labe-div {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.span-must {
+  color: #acdef5;
+}
+.submit-btn {
   width: 6em;
   height: 2em;
   font-size: 1.5rem;
@@ -249,25 +271,29 @@ input{
   background: #f6ebc8;
   color: #780606;
 }
-.submit-btn:hover{
+.submit-btn:hover {
   background: #acdef5;
   transition: all ease 0.5s;
 }
-.submit{
+.submit {
   display: flex;
   justify-content: end;
 }
-.complete{
+.complete {
   display: none;
   text-align: center;
+  height: 20vh;
+  margin: auto;
 }
-.complete-title{
+.complete-title {
   color: #f6ebc8;
   font-size: 3.5rem;
+  margin: 0;
 }
-.complete-text{
+.complete-text {
   color: #f6ebc8;
   font-size: 1.5rem;
+  margin: 0;
 }
 .correct {
   background-color: #c8f7c5; /* 연한 초록 */
@@ -277,19 +303,59 @@ input{
   background-color: #f7c5c5; /* 연한 빨강 */
 }
 
-
-@media (min-width:1024px) {
-  .modal-apply{
+@media (min-width: 1024px) {
+  .modal-apply {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
-  form{
+  h1 {
+    font-size: 8rem;
+    margin: 0;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  form {
     width: 50%;
   }
+  label {
+    font-size: 1.8rem;
+  }
   .answers {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, auto);
-  align-content: center;
-}
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, auto);
+    align-content: center;
+  }
+  .apply-title {
+    font-size: 4rem;
+  }
+  #apply-email,
+  #apply-name,
+  #apply-phone {
+    font-size: 2rem;
+  }
+  input {
+    padding: 0.6em;
+    font-size: 1.7rem;
+  }
+  .submit-btn {
+    width: 8em;
+    height: 3em;
+    font-size: 2rem;
+    padding: 0;
+    border-radius: 2em;
+  }
+  .complete {
+    height: 30vh;
+  }
+  .complete-title {
+    font-size: 5rem;
+  }
+  .complete-text {
+    font-size: 3rem;
+  }
 }
